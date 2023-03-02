@@ -4,10 +4,44 @@
     src: templates/dockerEnv.env
     dest: "../.env"
 
+- name: Install prerequisites
+  apt:
+    name:
+    - ca-certificates
+    - curl
+    - gnupg
+    - lsb-release
+    state: latest
+    update_cache: yes
+
+- name: Add Docker's GPG key for Ubuntu
+  apt_key:
+    url:  https://download.docker.com/linux/ubuntu/gpg
+    state: present
+  tags:
+    - docker
+
+- name: Configure Docker Repository
+  apt_repository:
+    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable
+    state: present
+    update_cache: yes
+  tags:
+    - docker
+
+- name: Updated apt packages
+  apt:
+    update_cache: yes
+  tags:
+    - docker
+
 - name: Install the needed docker packages
   apt:
     name:
     - docker
+    #- docker-ce
+    #- docker-ce-cli
+    #- containerd.io
     - docker-compose
     state: latest
     cache_valid_time: 3600
@@ -44,6 +78,6 @@
     src: templates/traefik.toml
     dest: "{{docker.data_dir}}/traefik/traefik.toml"
 
-- name: Create the external docker network {{docker.external_network}}
-  docker_network:
-    name: "{{docker.external_network}}"
+#- name: Create the external docker network {{docker.external_network}}
+#  docker_network:
+#    name: "{{docker.external_network}}"

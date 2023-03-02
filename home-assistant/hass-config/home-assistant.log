@@ -1,0 +1,106 @@
+2023-03-02 16:30:32.295 ERROR (Recorder) [homeassistant.components.recorder.core] Error during connection setup: (MySQLdb.OperationalError) (2002, "Can't connect to MySQL server on '172.17.0.1' (115)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8) (retrying in 3 seconds)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3269, in raw_connection
+    return self.pool.connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 455, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 1270, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 719, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 168, in _do_get
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 166, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 396, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 681, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 905, in __connect
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 640, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 580, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2002, "Can't connect to MySQL server on '172.17.0.1' (115)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/recorder/core.py", line 806, in _setup_recorder
+    self._setup_connection()
+  File "/usr/src/homeassistant/homeassistant/components/recorder/core.py", line 1289, in _setup_connection
+    Base.metadata.create_all(self.engine)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/sql/schema.py", line 5576, in create_all
+    bind._run_ddl_visitor(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3219, in _run_ddl_visitor
+    with self.begin() as conn:
+  File "/usr/local/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3209, in begin
+    with self.connect() as conn:
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3245, in connect
+    return self._connection_cls(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2410, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3269, in raw_connection
+    return self.pool.connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 455, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 1270, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 719, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 168, in _do_get
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 166, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 396, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 681, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 905, in __connect
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 640, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 580, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+sqlalchemy.exc.OperationalError: (MySQLdb.OperationalError) (2002, "Can't connect to MySQL server on '172.17.0.1' (115)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-03-02 16:30:37.503 WARNING (MainThread) [homeassistant.components.mqtt] The 'broker' option near /config/configuration.yaml:20 is deprecated, please remove it from your configuration
+2023-03-02 17:22:19.727 DEBUG (MainThread) [async_upnp_client.traffic.ssdp] Received packet from ('192.168.4.129', 57188): b'NOTIFY * HTTP/1.1\r\nHOST: 239.255.255.250:1900\r\nCACHE-CONTROL: max-age = 1800\r\nLOCATION: http://192.168.4.129:8895/deviceDescription/cd584002-2e05-38ea-8238-84aefc4d3b11\r\nSERVER: Mac OS X, UPnP/1.0 DLNADOC/1.50, Serviio/1.6.1\r\nNTS: ssdp:alive\r\nNT: urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1\r\nUSN: uuid:cd584002-2e05-38ea-8238-84aefc4d3b11::urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1\r\n\r\n'
+2023-03-02 17:22:19.728 DEBUG (MainThread) [async_upnp_client.advertisement] Received advertisement, _remote_addr: ('192.168.4.129', 57188), USN: uuid:cd584002-2e05-38ea-8238-84aefc4d3b11::urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1, location: http://192.168.4.129:8895/deviceDescription/cd584002-2e05-38ea-8238-84aefc4d3b11
+2023-03-02 17:22:19.728 DEBUG (MainThread) [async_upnp_client.traffic.ssdp] Received packet from ('192.168.4.129', 57188): b'NOTIFY * HTTP/1.1\r\nHOST: 239.255.255.250:1900\r\nCACHE-CONTROL: max-age = 1800\r\nLOCATION: http://192.168.4.129:8895/deviceDescription/cd584002-2e05-38ea-8238-84aefc4d3b11\r\nSERVER: Mac OS X, UPnP/1.0 DLNADOC/1.50, Serviio/1.6.1\r\nNTS: ssdp:alive\r\nNT: urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1\r\nUSN: uuid:cd584002-2e05-38ea-8238-84aefc4d3b11::urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1\r\n\r\n'
+2023-03-02 17:22:19.975 DEBUG (MainThread) [async_upnp_client.traffic.ssdp] Received packet from ('192.168.4.129', 57188): b'NOTIFY * HTTP/1.1\r\nHOST: 239.255.255.250:1900\r\nCACHE-CONTROL: max-age = 1800\r\nLOCATION: http://192.168.4.129:8895/deviceDescription/cd584002-2e05-38ea-8238-84aefc4d3b11\r\nSERVER: Mac OS X, UPnP/1.0 DLNADOC/1.50, Serviio/1.6.1\r\nNTS: ssdp:alive\r\nNT: urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1\r\nUSN: uuid:cd584002-2e05-38ea-8238-84aefc4d3b11::urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1\r\n\r\n'
+2023-03-02 17:22:19.975 DEBUG (MainThread) [async_upnp_client.advertisement] Received advertisement, _remote_addr: ('192.168.4.129', 57188), USN: uuid:cd584002-2e05-38ea-8238-84aefc4d3b11::urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1, location: http://192.168.4.129:8895/deviceDescription/cd584002-2e05-38ea-8238-84aefc4d3b11
+2023-03-02 17:22:19.976 DEBUG (MainThread) [async_upnp_client.traffic.ssdp] Received packet from ('192.168.4.129', 57188): b'NOTIFY * HTTP/1.1\r\nHOST: 239.255.255.250:1900\r\nCACHE-CONTROL: max-age = 1800\r\nLOCATION: http://192.168.4.129:8895/deviceDescription/cd584002-2e05-38ea-8238-84aefc4d3b11\r\nSERVER: Mac OS X, UPnP/1.0 DLNADOC/1.50, Serviio/1.6.1\r\nNTS: ssdp:alive\r\nNT: urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1\r\nUSN: uuid:cd584002-2e05-38ea-8238-84aefc4d3b11::urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1\r\n\r\n'
+2023-03-02 17:22:20.119 DEBUG (MainThread) [async_upnp_client.traffic.ssdp] Received packet from ('192.168.4.129', 57188): b'NOTIFY * HTTP/1.1\r\nHOST: 239.255.255.250:1900\r\nCACHE-CONTROL: max-age = 1800\r\nLOCATION: http://192.168.4.129:8895/deviceDescription/cd584002-2e05-38ea-8238-84aefc4d3b11\r\nSERVER: Mac OS X, UPnP/1.0 DLNADOC/1.50, Serviio/1.6.1\r\nNTS: ssdp:alive\r\nNT: urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1\r\nUSN: uuid:cd584002-2e05-38ea-8238-84aefc4d3b11::urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1\r\n\r\n'
+2023-03-02 17:22:20.120 DEBUG (MainThread) [async_upnp_client.advertisement] Received advertisement, _remote_addr: ('192.168.4.129', 57188), USN: uuid:cd584002-2e05-38ea-8238-84aefc4d3b11::urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1, location: http://192.168.4.129:8895/deviceDescription/cd584002-2e05-38ea-8238-84aefc4d3b11
+2023-03-02 17:22:20.120 DEBUG (MainThread) [async_upnp_client.traffic.ssdp] Received packet from ('192.168.4.129', 57188): b'NOTIFY * HTTP/1.1\r\nHOST: 239.255.255.250:1900\r\nCACHE-CONTROL: max-age = 1800\r\nLOCATION: http://192.168.4.129:8895/deviceDescription/cd584002-2e05-38ea-8238-84aefc4d3b11\r\nSERVER: Mac OS X, UPnP/1.0 DLNADOC/1.50, Serviio/1.6.1\r\nNTS: ssdp:alive\r\nNT: urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1\r\nUSN: uuid:cd584002-2e05-38ea-8238-84aefc4d3b11::urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1\r\n\r\n'

@@ -32,7 +32,8 @@ domain_name: example.com
 
 docker: {
   external_network: traefik_proxy,
-  data_dir: '/{{zfs.poolName}}/docker/data',
+  # data_dir: '/{{zfs.poolName}}/docker/data',
+  data_dir: '~/docker/data',
   # data for docker env
   PUID: '1000',
   PGID: '115'

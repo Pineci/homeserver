@@ -1,0 +1,757 @@
+2023-03-02 08:47:25.723 ERROR (MainThread) [homeassistant.config] Invalid config for [http]: not a valid value @ data['http']['trusted_proxies'][0]. Got 'XXX.XXX.XXX.XXX'. (See /config/configuration.yaml, line 3). Please check the docs at https://www.home-assistant.io/integrations/http
+2023-03-02 08:47:25.725 ERROR (MainThread) [homeassistant.setup] Setup failed for http: Invalid config.
+2023-03-02 08:47:25.725 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of api. Setup failed for dependencies: http
+2023-03-02 08:47:25.726 ERROR (MainThread) [homeassistant.setup] Setup failed for api: (DependencyError(...), 'Could not setup dependencies: http')
+2023-03-02 08:47:25.726 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of auth. Setup failed for dependencies: http
+2023-03-02 08:47:25.726 ERROR (MainThread) [homeassistant.setup] Setup failed for auth: (DependencyError(...), 'Could not setup dependencies: http')
+2023-03-02 08:47:25.727 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of config. Setup failed for dependencies: http
+2023-03-02 08:47:25.727 ERROR (MainThread) [homeassistant.setup] Setup failed for config: (DependencyError(...), 'Could not setup dependencies: http')
+2023-03-02 08:47:25.727 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of diagnostics. Setup failed for dependencies: http
+2023-03-02 08:47:25.728 ERROR (MainThread) [homeassistant.setup] Setup failed for diagnostics: (DependencyError(...), 'Could not setup dependencies: http')
+2023-03-02 08:47:25.728 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of file_upload. Setup failed for dependencies: http
+2023-03-02 08:47:25.728 ERROR (MainThread) [homeassistant.setup] Setup failed for file_upload: (DependencyError(...), 'Could not setup dependencies: http')
+2023-03-02 08:47:25.728 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of repairs. Setup failed for dependencies: http
+2023-03-02 08:47:25.729 ERROR (MainThread) [homeassistant.setup] Setup failed for repairs: (DependencyError(...), 'Could not setup dependencies: http')
+2023-03-02 08:47:25.729 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of websocket_api. Setup failed for dependencies: http
+2023-03-02 08:47:25.729 ERROR (MainThread) [homeassistant.setup] Setup failed for websocket_api: (DependencyError(...), 'Could not setup dependencies: http')
+2023-03-02 08:47:25.730 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of image_upload. Setup failed for dependencies: http
+2023-03-02 08:47:25.730 ERROR (MainThread) [homeassistant.setup] Setup failed for image_upload: (DependencyError(...), 'Could not setup dependencies: http')
+2023-03-02 08:47:25.730 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of search. Setup failed for dependencies: websocket_api
+2023-03-02 08:47:25.731 ERROR (MainThread) [homeassistant.setup] Setup failed for search: (DependencyError(...), 'Could not setup dependencies: websocket_api')
+2023-03-02 08:47:25.731 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of analytics. Setup failed for dependencies: api, websocket_api
+2023-03-02 08:47:25.731 ERROR (MainThread) [homeassistant.setup] Setup failed for analytics: (DependencyError(...), 'Could not setup dependencies: api, websocket_api')
+2023-03-02 08:47:25.732 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of person. Setup failed for dependencies: image_upload
+2023-03-02 08:47:25.732 ERROR (MainThread) [homeassistant.setup] Setup failed for person: (DependencyError(...), 'Could not setup dependencies: image_upload')
+2023-03-02 08:47:25.733 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of onboarding. Setup failed for dependencies: analytics, auth, http, person
+2023-03-02 08:47:25.733 ERROR (MainThread) [homeassistant.setup] Setup failed for onboarding: (DependencyError(...), 'Could not setup dependencies: analytics, auth, http, person')
+2023-03-02 08:47:25.733 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of frontend. Setup failed for dependencies: api, auth, config, diagnostics, file_upload, http, onboarding, repairs, search, websocket_api
+2023-03-02 08:47:25.733 ERROR (MainThread) [homeassistant.setup] Setup failed for frontend: (DependencyError(...), 'Could not setup dependencies: api, auth, config, diagnostics, file_upload, http, onboarding, repairs, search, websocket_api')
+2023-03-02 08:47:26.023 ERROR (Recorder) [homeassistant.components.recorder.core] Error during connection setup: (MySQLdb.OperationalError) (2002, "Can't connect to MySQL server on '172.17.0.1' (115)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8) (retrying in 3 seconds)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3269, in raw_connection
+    return self.pool.connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 455, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 1270, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 719, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 168, in _do_get
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 166, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 396, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 681, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 905, in __connect
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 640, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 580, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2002, "Can't connect to MySQL server on '172.17.0.1' (115)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/recorder/core.py", line 806, in _setup_recorder
+    self._setup_connection()
+  File "/usr/src/homeassistant/homeassistant/components/recorder/core.py", line 1289, in _setup_connection
+    Base.metadata.create_all(self.engine)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/sql/schema.py", line 5576, in create_all
+    bind._run_ddl_visitor(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3219, in _run_ddl_visitor
+    with self.begin() as conn:
+  File "/usr/local/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3209, in begin
+    with self.connect() as conn:
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3245, in connect
+    return self._connection_cls(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2410, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3269, in raw_connection
+    return self.pool.connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 455, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 1270, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 719, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 168, in _do_get
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 166, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 396, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 681, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 905, in __connect
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 640, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 580, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+sqlalchemy.exc.OperationalError: (MySQLdb.OperationalError) (2002, "Can't connect to MySQL server on '172.17.0.1' (115)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-03-02 08:47:29.031 ERROR (Recorder) [homeassistant.components.recorder.core] Error during connection setup: (MySQLdb.OperationalError) (2002, "Can't connect to MySQL server on '172.17.0.1' (115)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8) (retrying in 3 seconds)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3269, in raw_connection
+    return self.pool.connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 455, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 1270, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 719, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 168, in _do_get
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 166, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 396, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 681, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 905, in __connect
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 640, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 580, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2002, "Can't connect to MySQL server on '172.17.0.1' (115)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/recorder/core.py", line 806, in _setup_recorder
+    self._setup_connection()
+  File "/usr/src/homeassistant/homeassistant/components/recorder/core.py", line 1289, in _setup_connection
+    Base.metadata.create_all(self.engine)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/sql/schema.py", line 5576, in create_all
+    bind._run_ddl_visitor(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3219, in _run_ddl_visitor
+    with self.begin() as conn:
+  File "/usr/local/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3209, in begin
+    with self.connect() as conn:
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3245, in connect
+    return self._connection_cls(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2410, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3269, in raw_connection
+    return self.pool.connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 455, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 1270, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 719, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 168, in _do_get
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 166, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 396, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 681, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 905, in __connect
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 640, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 580, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+sqlalchemy.exc.OperationalError: (MySQLdb.OperationalError) (2002, "Can't connect to MySQL server on '172.17.0.1' (115)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-03-02 08:47:32.035 ERROR (Recorder) [homeassistant.components.recorder.core] Error during connection setup: (MySQLdb.OperationalError) (2002, "Can't connect to MySQL server on '172.17.0.1' (115)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8) (retrying in 3 seconds)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3269, in raw_connection
+    return self.pool.connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 455, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 1270, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 719, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 168, in _do_get
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 166, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 396, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 681, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 905, in __connect
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 640, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 580, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2002, "Can't connect to MySQL server on '172.17.0.1' (115)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/recorder/core.py", line 806, in _setup_recorder
+    self._setup_connection()
+  File "/usr/src/homeassistant/homeassistant/components/recorder/core.py", line 1289, in _setup_connection
+    Base.metadata.create_all(self.engine)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/sql/schema.py", line 5576, in create_all
+    bind._run_ddl_visitor(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3219, in _run_ddl_visitor
+    with self.begin() as conn:
+  File "/usr/local/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3209, in begin
+    with self.connect() as conn:
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3245, in connect
+    return self._connection_cls(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2410, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3269, in raw_connection
+    return self.pool.connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 455, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 1270, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 719, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 168, in _do_get
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 166, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 396, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 681, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 905, in __connect
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 640, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 580, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+sqlalchemy.exc.OperationalError: (MySQLdb.OperationalError) (2002, "Can't connect to MySQL server on '172.17.0.1' (115)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-03-02 08:47:35.042 ERROR (Recorder) [homeassistant.components.recorder.core] Error during connection setup: (MySQLdb.OperationalError) (2002, "Can't connect to MySQL server on '172.17.0.1' (115)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8) (retrying in 3 seconds)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3269, in raw_connection
+    return self.pool.connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 455, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 1270, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 719, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 168, in _do_get
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 166, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 396, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 681, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 905, in __connect
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 640, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 580, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2002, "Can't connect to MySQL server on '172.17.0.1' (115)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/recorder/core.py", line 806, in _setup_recorder
+    self._setup_connection()
+  File "/usr/src/homeassistant/homeassistant/components/recorder/core.py", line 1289, in _setup_connection
+    Base.metadata.create_all(self.engine)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/sql/schema.py", line 5576, in create_all
+    bind._run_ddl_visitor(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3219, in _run_ddl_visitor
+    with self.begin() as conn:
+  File "/usr/local/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3209, in begin
+    with self.connect() as conn:
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3245, in connect
+    return self._connection_cls(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2410, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3269, in raw_connection
+    return self.pool.connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 455, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 1270, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 719, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 168, in _do_get
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 166, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 396, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 681, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 905, in __connect
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 640, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 580, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+sqlalchemy.exc.OperationalError: (MySQLdb.OperationalError) (2002, "Can't connect to MySQL server on '172.17.0.1' (115)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-03-02 08:47:36.017 WARNING (MainThread) [homeassistant.setup] Setup of recorder is taking over 10 seconds.
+2023-03-02 08:47:38.047 ERROR (Recorder) [homeassistant.components.recorder.core] Error during connection setup: (MySQLdb.OperationalError) (2002, "Can't connect to MySQL server on '172.17.0.1' (115)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8) (retrying in 3 seconds)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3269, in raw_connection
+    return self.pool.connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 455, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 1270, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 719, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 168, in _do_get
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 166, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 396, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 681, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 905, in __connect
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 640, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 580, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2002, "Can't connect to MySQL server on '172.17.0.1' (115)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/recorder/core.py", line 806, in _setup_recorder
+    self._setup_connection()
+  File "/usr/src/homeassistant/homeassistant/components/recorder/core.py", line 1289, in _setup_connection
+    Base.metadata.create_all(self.engine)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/sql/schema.py", line 5576, in create_all
+    bind._run_ddl_visitor(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3219, in _run_ddl_visitor
+    with self.begin() as conn:
+  File "/usr/local/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3209, in begin
+    with self.connect() as conn:
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3245, in connect
+    return self._connection_cls(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2410, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3269, in raw_connection
+    return self.pool.connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 455, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 1270, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 719, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 168, in _do_get
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 166, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 396, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 681, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 905, in __connect
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 640, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 580, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+sqlalchemy.exc.OperationalError: (MySQLdb.OperationalError) (2002, "Can't connect to MySQL server on '172.17.0.1' (115)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-03-02 08:47:41.053 ERROR (Recorder) [homeassistant.components.recorder.core] Error during connection setup: (MySQLdb.OperationalError) (2002, "Can't connect to MySQL server on '172.17.0.1' (115)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8) (retrying in 3 seconds)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3269, in raw_connection
+    return self.pool.connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 455, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 1270, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 719, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 168, in _do_get
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 166, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 396, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 681, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 905, in __connect
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 640, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 580, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2002, "Can't connect to MySQL server on '172.17.0.1' (115)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/recorder/core.py", line 806, in _setup_recorder
+    self._setup_connection()
+  File "/usr/src/homeassistant/homeassistant/components/recorder/core.py", line 1289, in _setup_connection
+    Base.metadata.create_all(self.engine)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/sql/schema.py", line 5576, in create_all
+    bind._run_ddl_visitor(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3219, in _run_ddl_visitor
+    with self.begin() as conn:
+  File "/usr/local/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3209, in begin
+    with self.connect() as conn:
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3245, in connect
+    return self._connection_cls(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2410, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3269, in raw_connection
+    return self.pool.connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 455, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 1270, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 719, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 168, in _do_get
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 166, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 396, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 681, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 905, in __connect
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 640, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 580, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+sqlalchemy.exc.OperationalError: (MySQLdb.OperationalError) (2002, "Can't connect to MySQL server on '172.17.0.1' (115)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-03-02 08:47:44.060 ERROR (Recorder) [homeassistant.components.recorder.core] Error during connection setup: (MySQLdb.OperationalError) (2002, "Can't connect to MySQL server on '172.17.0.1' (115)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8) (retrying in 3 seconds)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3269, in raw_connection
+    return self.pool.connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 455, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 1270, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 719, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 168, in _do_get
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 166, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 396, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 681, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 905, in __connect
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 640, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 580, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2002, "Can't connect to MySQL server on '172.17.0.1' (115)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/recorder/core.py", line 806, in _setup_recorder
+    self._setup_connection()
+  File "/usr/src/homeassistant/homeassistant/components/recorder/core.py", line 1289, in _setup_connection
+    Base.metadata.create_all(self.engine)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/sql/schema.py", line 5576, in create_all
+    bind._run_ddl_visitor(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3219, in _run_ddl_visitor
+    with self.begin() as conn:
+  File "/usr/local/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3209, in begin
+    with self.connect() as conn:
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3245, in connect
+    return self._connection_cls(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2410, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3269, in raw_connection
+    return self.pool.connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 455, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 1270, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 719, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 168, in _do_get
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 166, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 396, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 681, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 905, in __connect
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 640, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 580, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+sqlalchemy.exc.OperationalError: (MySQLdb.OperationalError) (2002, "Can't connect to MySQL server on '172.17.0.1' (115)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-03-02 08:47:52.511 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of usb. Setup failed for dependencies: websocket_api
+2023-03-02 08:47:52.512 ERROR (MainThread) [homeassistant.setup] Setup failed for usb: (DependencyError(...), 'Could not setup dependencies: websocket_api')
+2023-03-02 08:47:52.512 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of network. Setup failed for dependencies: websocket_api
+2023-03-02 08:47:52.513 ERROR (MainThread) [homeassistant.setup] Setup failed for network: (DependencyError(...), 'Could not setup dependencies: websocket_api')
+2023-03-02 08:47:52.513 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of webhook. Setup failed for dependencies: http
+2023-03-02 08:47:52.513 ERROR (MainThread) [homeassistant.setup] Setup failed for webhook: (DependencyError(...), 'Could not setup dependencies: http')
+2023-03-02 08:47:52.545 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of bluetooth. Setup failed for dependencies: usb
+2023-03-02 08:47:52.545 ERROR (MainThread) [homeassistant.setup] Setup failed for bluetooth: (DependencyError(...), 'Could not setup dependencies: usb')
+2023-03-02 08:47:52.545 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of ssdp. Setup failed for dependencies: network
+2023-03-02 08:47:52.546 ERROR (MainThread) [homeassistant.setup] Setup failed for ssdp: (DependencyError(...), 'Could not setup dependencies: network')
+2023-03-02 08:47:52.546 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of zeroconf. Setup failed for dependencies: network, api
+2023-03-02 08:47:52.546 ERROR (MainThread) [homeassistant.setup] Setup failed for zeroconf: (DependencyError(...), 'Could not setup dependencies: network, api')
+2023-03-02 08:47:52.547 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of cloud. Setup failed for dependencies: http, webhook
+2023-03-02 08:47:52.547 ERROR (MainThread) [homeassistant.setup] Setup failed for cloud: (DependencyError(...), 'Could not setup dependencies: http, webhook')
+2023-03-02 08:47:52.636 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of application_credentials. Setup failed for dependencies: auth, websocket_api
+2023-03-02 08:47:52.636 ERROR (MainThread) [homeassistant.setup] Setup failed for application_credentials: (DependencyError(...), 'Could not setup dependencies: auth, websocket_api')
+2023-03-02 08:47:52.637 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of my. Setup failed for dependencies: frontend
+2023-03-02 08:47:52.638 ERROR (MainThread) [homeassistant.setup] Setup failed for my: (DependencyError(...), 'Could not setup dependencies: frontend')
+2023-03-02 08:47:52.638 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of mqtt. Setup failed for dependencies: file_upload, http
+2023-03-02 08:47:52.641 ERROR (MainThread) [homeassistant.setup] Setup failed for mqtt: (DependencyError(...), 'Could not setup dependencies: file_upload, http')
+2023-03-02 08:47:52.642 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of conversation. Setup failed for dependencies: http
+2023-03-02 08:47:52.642 ERROR (MainThread) [homeassistant.setup] Setup failed for conversation: (DependencyError(...), 'Could not setup dependencies: http')
+2023-03-02 08:47:52.643 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of panel_iframe. Setup failed for dependencies: frontend
+2023-03-02 08:47:52.644 ERROR (MainThread) [homeassistant.setup] Setup failed for panel_iframe: (DependencyError(...), 'Could not setup dependencies: frontend')
+2023-03-02 08:47:52.645 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of history. Setup failed for dependencies: http
+2023-03-02 08:47:52.646 ERROR (MainThread) [homeassistant.setup] Setup failed for history: (DependencyError(...), 'Could not setup dependencies: http')
+2023-03-02 08:47:52.649 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of map. Setup failed for dependencies: frontend
+2023-03-02 08:47:52.649 ERROR (MainThread) [homeassistant.setup] Setup failed for map: (DependencyError(...), 'Could not setup dependencies: frontend')
+2023-03-02 08:47:52.650 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of media_source. Setup failed for dependencies: http
+2023-03-02 08:47:52.650 ERROR (MainThread) [homeassistant.setup] Setup failed for media_source: (DependencyError(...), 'Could not setup dependencies: http')
+2023-03-02 08:47:52.650 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of logbook. Setup failed for dependencies: frontend, http
+2023-03-02 08:47:52.650 ERROR (MainThread) [homeassistant.setup] Setup failed for logbook: (DependencyError(...), 'Could not setup dependencies: frontend, http')
+2023-03-02 08:47:52.651 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of system_health. Setup failed for dependencies: http
+2023-03-02 08:47:52.651 ERROR (MainThread) [homeassistant.setup] Setup failed for system_health: (DependencyError(...), 'Could not setup dependencies: http')
+2023-03-02 08:47:52.653 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of energy. Setup failed for dependencies: websocket_api, history
+2023-03-02 08:47:52.654 ERROR (MainThread) [homeassistant.setup] Setup failed for energy: (DependencyError(...), 'Could not setup dependencies: websocket_api, history')
+2023-03-02 08:47:52.660 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of mobile_app. Setup failed for dependencies: http, webhook, person, websocket_api
+2023-03-02 08:47:52.660 ERROR (MainThread) [homeassistant.setup] Setup failed for mobile_app: (DependencyError(...), 'Could not setup dependencies: http, webhook, person, websocket_api')
+2023-03-02 08:47:52.695 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of default_config. Setup failed for dependencies: application_credentials, bluetooth, cloud, conversation, energy, frontend, history, logbook, map, media_source, mobile_app, my, network, person, ssdp, system_health, usb, webhook, zeroconf
+2023-03-02 08:47:52.696 ERROR (MainThread) [homeassistant.setup] Setup failed for default_config: (DependencyError(...), 'Could not setup dependencies: application_credentials, bluetooth, cloud, conversation, energy, frontend, history, logbook, map, media_source, mobile_app, my, network, person, ssdp, system_health, usb, webhook, zeroconf')
+2023-03-02 08:47:52.696 WARNING (MainThread) [homeassistant.bootstrap] Detected that frontend did not load. Activating safe mode
+2023-03-02 16:20:24.614 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.4.252 (192.168.4.252). Requested URL: '/auth/login_flow/c2ca062d5e68aa444c2937b27976fe53'. (Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36)
+2023-03-02 16:29:07.992 WARNING (Recorder) [homeassistant.components.recorder.core] Recorder startup was externally canceled before it could complete: 
+2023-03-02 16:29:08.020 ERROR (Recorder) [root] Uncaught thread exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/usr/src/homeassistant/homeassistant/components/recorder/core.py", line 659, in run
+    self.hass.add_job(self.async_set_db_ready)
+  File "/usr/src/homeassistant/homeassistant/core.py", line 404, in add_job
+    self.loop.call_soon_threadsafe(self.async_add_job, target, *args)
+  File "/usr/local/lib/python3.10/asyncio/base_events.py", line 798, in call_soon_threadsafe
+    self._check_closed()
+  File "/usr/local/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
