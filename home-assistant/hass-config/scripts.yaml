@@ -1,0 +1,21 @@
+new_script:
+  alias: Doorbell Snap Picture
+  sequence:
+  - service: blink.trigger_camera
+    data: {}
+    target:
+      device_id: 627b835abd6af984ad41a3d81fb23eea
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
+  - service: blink.blink_update
+    data: {}
+  - service: camera.snapshot
+    data:
+      filename: /tmp/my_image.jpg
+    target:
+      device_id: 627b835abd6af984ad41a3d81fb23eea
+  mode: single
+  icon: mdi:camera
