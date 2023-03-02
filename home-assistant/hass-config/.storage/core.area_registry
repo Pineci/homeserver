@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "minor_version": 3,
+  "key": "core.area_registry",
+  "data": {
+    "areas": [
+      {
+        "aliases": [],
+        "name": "Living Room",
+        "id": "living_room",
+        "picture": null
+      },
+      {
+        "aliases": [],
+        "name": "Kitchen",
+        "id": "kitchen",
+        "picture": null
+      },
+      {
+        "aliases": [],
+        "name": "Pineci's Room",
+        "id": "bedroom",
+        "picture": null
+      },
+      {
+        "aliases": [],
+        "name": "Ben's and Abi's Room",
+        "id": "ben_s_and_abi_s_room",
+        "picture": null
+      },
+      {
+        "aliases": [],
+        "name": "Projector Room",
+        "id": "projector_room",
+        "picture": null
+      }
+    ]
+  }
+}

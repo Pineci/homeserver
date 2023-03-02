@@ -1,0 +1,480 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "core.restore_state",
+  "data": [
+    {
+      "state": {
+        "entity_id": "person.anthony",
+        "state": "home",
+        "attributes": {
+          "editable": true,
+          "id": "anthony",
+          "latitude": 34.040557861328125,
+          "longitude": -118.33102546686725,
+          "gps_accuracy": 10.50099064986245,
+          "source": "device_tracker.pineci",
+          "user_id": "11335c22a6fc4fa69d74976dc0afb810",
+          "friendly_name": "Anthony"
+        },
+        "last_changed": "2023-03-02T18:40:45.394859+00:00",
+        "last_updated": "2023-03-02T18:40:45.394859+00:00",
+        "context": {
+          "id": "01GTHT0VAJ26D90RWAFYW2YV4Z",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2023-03-02T21:00:39.643710+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "device_tracker.pineci",
+        "state": "home",
+        "attributes": {
+          "source_type": "gps",
+          "battery_level": 38,
+          "latitude": 34.040557861328125,
+          "longitude": -118.33102546686725,
+          "gps_accuracy": 10.50099064986245,
+          "altitude": 60.348588943481445,
+          "vertical_accuracy": 1.1089906692504883,
+          "friendly_name": "Pineci"
+        },
+        "last_changed": "2023-03-02T18:40:46.263112+00:00",
+        "last_updated": "2023-03-02T18:40:46.263112+00:00",
+        "context": {
+          "id": "01GTHT0W5Q973W4T6E0DX9P5YB",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2023-03-02T21:00:39.643710+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.pineci_battery_level",
+        "state": "30",
+        "attributes": {
+          "unit_of_measurement": "%",
+          "device_class": "battery",
+          "icon": "mdi:battery-30",
+          "friendly_name": "Pineci Battery Level"
+        },
+        "last_changed": "2023-03-02T20:59:55.846093+00:00",
+        "last_updated": "2023-03-02T20:59:55.846093+00:00",
+        "context": {
+          "id": "01GTJ1ZP261CQBV38Y3A1RB6KJ",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": 30,
+        "native_unit_of_measurement": "%"
+      },
+      "last_seen": "2023-03-02T21:00:39.643710+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.pineci_battery_state",
+        "state": "Not Charging",
+        "attributes": {
+          "Low Power Mode": true,
+          "icon": "mdi:battery-30",
+          "friendly_name": "Pineci Battery State"
+        },
+        "last_changed": "2023-03-02T17:44:04.739060+00:00",
+        "last_updated": "2023-03-02T18:01:46.925457+00:00",
+        "context": {
+          "id": "01GTHQSFNDR7NHNF1ZJ4F9C7JV",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": "Not Charging",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2023-03-02T21:00:39.643710+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.pineci_ssid",
+        "state": "NEPTR",
+        "attributes": {
+          "icon": "mdi:wifi",
+          "friendly_name": "Pineci SSID"
+        },
+        "last_changed": "2023-03-02T20:13:35.914849+00:00",
+        "last_updated": "2023-03-02T20:13:35.914849+00:00",
+        "context": {
+          "id": "01GTHZAV9AH5GE5DXHJZ2ZSNPH",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": "NEPTR",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2023-03-02T21:00:39.643710+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.pineci_storage",
+        "state": "29.25",
+        "attributes": {
+          "Available": "20.68 GB",
+          "Available (Important)": "41.06 GB",
+          "Available (Opportunistic)": "37.40 GB",
+          "Total": "127.87 GB",
+          "unit_of_measurement": "% available",
+          "icon": "mdi:database",
+          "friendly_name": "Pineci Storage"
+        },
+        "last_changed": "2023-03-02T20:59:55.846497+00:00",
+        "last_updated": "2023-03-02T20:59:55.846497+00:00",
+        "context": {
+          "id": "01GTJ1ZP26G9BJQ547CTGHWM68",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": "29.25",
+        "native_unit_of_measurement": "% available"
+      },
+      "last_seen": "2023-03-02T21:00:39.643710+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.pineci_bssid",
+        "state": "d0:16:7c:cc:44:66",
+        "attributes": {
+          "icon": "mdi:wifi-star",
+          "friendly_name": "Pineci BSSID"
+        },
+        "last_changed": "2023-03-02T20:41:17.568184+00:00",
+        "last_updated": "2023-03-02T20:41:17.568184+00:00",
+        "context": {
+          "id": "01GTJ0XJ003JYEJ06717TDCAN6",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": "d0:16:7c:cc:44:66",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2023-03-02T21:00:39.643710+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.pineci_connection_type",
+        "state": "Wi-Fi",
+        "attributes": {
+          "icon": "mdi:wifi",
+          "friendly_name": "Pineci Connection Type"
+        },
+        "last_changed": "2023-03-02T20:13:35.915104+00:00",
+        "last_updated": "2023-03-02T20:13:35.915104+00:00",
+        "context": {
+          "id": "01GTHZAV9BJM44J7BYEPDG3JGM",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": "Wi-Fi",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2023-03-02T21:00:39.643710+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.pineci_sim_1",
+        "state": "AT&T",
+        "attributes": {
+          "Allows VoIP": true,
+          "Carrier ID": "0000000100000001",
+          "Carrier Name": "AT&T",
+          "Current Radio Technology": "5G Non-Standalone",
+          "ISO Country Code": "us",
+          "Mobile Country Code": "310",
+          "Mobile Network Code": "280",
+          "icon": "mdi:sim",
+          "friendly_name": "Pineci SIM 1"
+        },
+        "last_changed": "2023-03-02T17:44:04.747962+00:00",
+        "last_updated": "2023-03-02T17:44:04.747962+00:00",
+        "context": {
+          "id": "01GTHPS2CBJJN7X90AATF71E97",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": "AT&T",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2023-03-02T21:00:39.643710+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.pineci_sim_2",
+        "state": "N/A",
+        "attributes": {
+          "Allows VoIP": true,
+          "Carrier ID": "0000000100000002",
+          "Carrier Name": "N/A",
+          "ISO Country Code": "N/A",
+          "Mobile Country Code": "N/A",
+          "Mobile Network Code": "N/A",
+          "icon": "mdi:sim",
+          "friendly_name": "Pineci SIM 2"
+        },
+        "last_changed": "2023-03-02T17:44:04.748041+00:00",
+        "last_updated": "2023-03-02T17:44:04.748041+00:00",
+        "context": {
+          "id": "01GTHPS2CCW19743PRCEQRSB15",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": "N/A",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2023-03-02T21:00:39.643710+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.pineci_geocoded_location",
+        "state": "1853 Crenshaw Blvd\nLos Angeles CA 90019\nUnited States",
+        "attributes": {
+          "Administrative Area": "CA",
+          "Areas Of Interest": "N/A",
+          "Country": "United States",
+          "Inland Water": "N/A",
+          "ISO Country Code": "US",
+          "Locality": "Los Angeles",
+          "Location": [
+            34.040557861328125,
+            -118.33102546686725
+          ],
+          "Name": "1853 Crenshaw Blvd",
+          "Ocean": "N/A",
+          "Postal Code": "90019",
+          "Sub Administrative Area": "Los Angeles County",
+          "Sub Locality": "Lafayette Square",
+          "Sub Thoroughfare": "1853",
+          "Thoroughfare": "Crenshaw Blvd",
+          "Time Zone": "America/Los_Angeles",
+          "Zones": [
+            "Home",
+            "PinkPalace"
+          ],
+          "icon": "mdi:map",
+          "friendly_name": "Pineci Geocoded Location"
+        },
+        "last_changed": "2023-03-02T18:40:45.671388+00:00",
+        "last_updated": "2023-03-02T18:40:45.671388+00:00",
+        "context": {
+          "id": "01GTHT0VK741H4A2TWW07QDEPM",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": "1853 Crenshaw Blvd\nLos Angeles CA 90019\nUnited States",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2023-03-02T21:00:39.643710+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.pineci_last_update_trigger",
+        "state": "Periodic",
+        "attributes": {
+          "icon": "mdi:cellphone-wireless",
+          "friendly_name": "Pineci Last Update Trigger"
+        },
+        "last_changed": "2023-03-02T20:25:07.530312+00:00",
+        "last_updated": "2023-03-02T20:25:07.530312+00:00",
+        "context": {
+          "id": "01GTHZZYPA236DR4451363HPYY",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": "Periodic",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2023-03-02T21:00:39.643710+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.pineci_activity",
+        "state": "Unknown",
+        "attributes": {
+          "Confidence": "High",
+          "Types": [
+            "Unknown"
+          ],
+          "icon": "mdi:help-circle",
+          "friendly_name": "Pineci Activity"
+        },
+        "last_changed": "2023-03-02T18:40:45.131175+00:00",
+        "last_updated": "2023-03-02T18:40:45.131175+00:00",
+        "context": {
+          "id": "01GTHT0V2BM6WMHY78EP836KT3",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": "Unknown",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2023-03-02T21:00:39.643710+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.pineci_distance",
+        "state": "31",
+        "attributes": {
+          "unit_of_measurement": "m",
+          "icon": "mdi:hiking",
+          "friendly_name": "Pineci Distance"
+        },
+        "last_changed": "2023-03-02T17:47:47.545316+00:00",
+        "last_updated": "2023-03-02T17:47:47.545316+00:00",
+        "context": {
+          "id": "01GTHPZVYS8BSHXJXN9ZNGKPFY",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": 31,
+        "native_unit_of_measurement": "m"
+      },
+      "last_seen": "2023-03-02T21:00:39.643710+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.pineci_floors_ascended",
+        "state": "0",
+        "attributes": {
+          "unit_of_measurement": "floors",
+          "icon": "mdi:stairs-up",
+          "friendly_name": "Pineci Floors Ascended"
+        },
+        "last_changed": "2023-03-02T17:47:47.552689+00:00",
+        "last_updated": "2023-03-02T17:47:47.552689+00:00",
+        "context": {
+          "id": "01GTHPZVZ0CVJXKM9422Q2Q905",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": 0,
+        "native_unit_of_measurement": "floors"
+      },
+      "last_seen": "2023-03-02T21:00:39.643710+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.pineci_average_active_pace",
+        "state": "5",
+        "attributes": {
+          "unit_of_measurement": "m/s",
+          "icon": "mdi:speedometer",
+          "friendly_name": "Pineci Average Active Pace"
+        },
+        "last_changed": "2023-03-02T17:47:47.557579+00:00",
+        "last_updated": "2023-03-02T17:47:47.557579+00:00",
+        "context": {
+          "id": "01GTHPZVZ5GSJXAWXV5BGXTQPA",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": 5,
+        "native_unit_of_measurement": "m/s"
+      },
+      "last_seen": "2023-03-02T21:00:39.643710+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.pineci_floors_descended",
+        "state": "0",
+        "attributes": {
+          "unit_of_measurement": "floors",
+          "icon": "mdi:stairs-down",
+          "friendly_name": "Pineci Floors Descended"
+        },
+        "last_changed": "2023-03-02T17:47:47.559223+00:00",
+        "last_updated": "2023-03-02T17:47:47.559223+00:00",
+        "context": {
+          "id": "01GTHPZVZ7H6ZZ2RQD924ZGQ2N",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": 0,
+        "native_unit_of_measurement": "floors"
+      },
+      "last_seen": "2023-03-02T21:00:39.643710+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.pineci_steps",
+        "state": "50",
+        "attributes": {
+          "unit_of_measurement": "steps",
+          "icon": "mdi:walk",
+          "friendly_name": "Pineci Steps"
+        },
+        "last_changed": "2023-03-02T17:47:47.559366+00:00",
+        "last_updated": "2023-03-02T17:47:47.559366+00:00",
+        "context": {
+          "id": "01GTHPZVZ7V0PRQVMYDQNQ4A1Y",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": 50,
+        "native_unit_of_measurement": "steps"
+      },
+      "last_seen": "2023-03-02T21:00:39.643710+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "binary_sensor.pineci_focus",
+        "state": "off",
+        "attributes": {
+          "icon": "mdi:moon-waning-crescent",
+          "friendly_name": "Pineci Focus"
+        },
+        "last_changed": "2023-03-02T17:47:47.560566+00:00",
+        "last_updated": "2023-03-02T17:47:47.560566+00:00",
+        "context": {
+          "id": "01GTHPZVZ8BAHEXJG7R85XZY9B",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2023-03-02T21:00:39.643710+00:00"
+    }
+  ]
+}

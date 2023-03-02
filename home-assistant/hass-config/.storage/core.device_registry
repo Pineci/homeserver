@@ -1,0 +1,234 @@
+{
+  "version": 1,
+  "minor_version": 3,
+  "key": "core.device_registry",
+  "data": {
+    "devices": [
+      {
+        "area_id": null,
+        "config_entries": [
+          "b6c90d03161af4cf930f0f5c0f41d513"
+        ],
+        "configuration_url": "https://www.met.no/en",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": "service",
+        "hw_version": null,
+        "id": "8697c8afa0aac32a5ecd98da1f33ab49",
+        "identifiers": [
+          [
+            "met"
+          ]
+        ],
+        "manufacturer": "Met.no",
+        "model": "Forecast",
+        "name_by_user": null,
+        "name": "Forecast",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "ee643bb08e505819d233d7bfff99ebb1"
+        ],
+        "configuration_url": null,
+        "connections": [
+          [
+            "upnp",
+            "uuid:fcdb9233-a63f-41da-b42c-7cfeb99c8adf"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "5c3fc7b4e7ce4ee2074a6b500df3f1c8",
+        "identifiers": [
+          [
+            "upnp_host",
+            "192.168.4.1"
+          ],
+          [
+            "upnp",
+            "uuid:fcdb9233-a63f-41da-b42c-7cfeb99c8adf::urn:schemas-upnp-org:device:InternetGatewayDevice:1"
+          ]
+        ],
+        "manufacturer": "eero inc.",
+        "model": "eero",
+        "name_by_user": null,
+        "name": "eero",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "9b14c77ca9fa518588ee03a21bb1648a"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "17f26cd02a535e65b247ccc5fcdcb663",
+        "identifiers": [
+          [
+            "mobile_app",
+            "8B187580-79AB-4F24-912B-E20EB090D209"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iPhone14,5",
+        "name_by_user": null,
+        "name": "Pineci",
+        "sw_version": "16.0.3",
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "4bf3954abfe77801e6f163d28510a9ed"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "b95f84c2dc7d3c824cc763fff544e921",
+        "identifiers": [
+          [
+            "blink",
+            "878400562"
+          ]
+        ],
+        "manufacturer": "Blink",
+        "model": "",
+        "name_by_user": null,
+        "name": "Backyard Cam",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "4bf3954abfe77801e6f163d28510a9ed"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "ec1d95e6070bdd353f60abdcbac87a13",
+        "identifiers": [
+          [
+            "blink",
+            "828400576"
+          ]
+        ],
+        "manufacturer": "Blink",
+        "model": "",
+        "name_by_user": null,
+        "name": "Balcony Cam",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "4bf3954abfe77801e6f163d28510a9ed"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "0e036c87ccab090e2b887637541669c6",
+        "identifiers": [
+          [
+            "blink",
+            "G8T1GH0003113EGS"
+          ]
+        ],
+        "manufacturer": "Blink",
+        "model": "",
+        "name_by_user": null,
+        "name": "Garage Cam",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "4bf3954abfe77801e6f163d28510a9ed"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "627b835abd6af984ad41a3d81fb23eea",
+        "identifiers": [
+          [
+            "blink",
+            "G8T1SJ0014031H2R"
+          ]
+        ],
+        "manufacturer": "Blink",
+        "model": "doorbell",
+        "name_by_user": null,
+        "name": "Pink Palace Doorbell",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "4bf3954abfe77801e6f163d28510a9ed"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "4670f574f36f329f077b8ef605d9186e",
+        "identifiers": [
+          [
+            "blink",
+            "G8T1V70014037PT8"
+          ]
+        ],
+        "manufacturer": "Blink",
+        "model": null,
+        "name_by_user": null,
+        "name": "Pink Palace Doorbell Module",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "4bf3954abfe77801e6f163d28510a9ed"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "04192c606e7ea78b73da8d04e6f71977",
+        "identifiers": [
+          [
+            "blink",
+            "295376242"
+          ]
+        ],
+        "manufacturer": "Blink",
+        "model": null,
+        "name_by_user": null,
+        "name": "External Cams Module",
+        "sw_version": null,
+        "via_device_id": null
+      }
+    ],
+    "deleted_devices": []
+  }
+}

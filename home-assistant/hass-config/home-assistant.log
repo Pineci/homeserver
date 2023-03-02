@@ -104,3 +104,18 @@ sqlalchemy.exc.OperationalError: (MySQLdb.OperationalError) (2002, "Can't connec
 2023-03-02 17:22:20.119 DEBUG (MainThread) [async_upnp_client.traffic.ssdp] Received packet from ('192.168.4.129', 57188): b'NOTIFY * HTTP/1.1\r\nHOST: 239.255.255.250:1900\r\nCACHE-CONTROL: max-age = 1800\r\nLOCATION: http://192.168.4.129:8895/deviceDescription/cd584002-2e05-38ea-8238-84aefc4d3b11\r\nSERVER: Mac OS X, UPnP/1.0 DLNADOC/1.50, Serviio/1.6.1\r\nNTS: ssdp:alive\r\nNT: urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1\r\nUSN: uuid:cd584002-2e05-38ea-8238-84aefc4d3b11::urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1\r\n\r\n'
 2023-03-02 17:22:20.120 DEBUG (MainThread) [async_upnp_client.advertisement] Received advertisement, _remote_addr: ('192.168.4.129', 57188), USN: uuid:cd584002-2e05-38ea-8238-84aefc4d3b11::urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1, location: http://192.168.4.129:8895/deviceDescription/cd584002-2e05-38ea-8238-84aefc4d3b11
 2023-03-02 17:22:20.120 DEBUG (MainThread) [async_upnp_client.traffic.ssdp] Received packet from ('192.168.4.129', 57188): b'NOTIFY * HTTP/1.1\r\nHOST: 239.255.255.250:1900\r\nCACHE-CONTROL: max-age = 1800\r\nLOCATION: http://192.168.4.129:8895/deviceDescription/cd584002-2e05-38ea-8238-84aefc4d3b11\r\nSERVER: Mac OS X, UPnP/1.0 DLNADOC/1.50, Serviio/1.6.1\r\nNTS: ssdp:alive\r\nNT: urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1\r\nUSN: uuid:cd584002-2e05-38ea-8238-84aefc4d3b11::urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1\r\n\r\n'
+2023-03-02 17:41:29.237 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/data_entry_flow.py", line 255, in async_configure
+    raise UnknownFlow
+homeassistant.data_entry_flow.UnknownFlow
+2023-03-02 18:03:34.225 WARNING (MainThread) [homeassistant.helpers.state] Integration sensor does not support reproduce state
+2023-03-02 18:03:34.229 WARNING (MainThread) [homeassistant.helpers.state] Integration binary_sensor does not support reproduce state
+2023-03-02 18:41:50.162 ERROR (SyncWorker_1) [blinkpy.auth] Invalid PIN
+2023-03-02 19:30:51.826 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/github/config_flow.py", line 132, in _wait_for_login
+    response = await self._device.activation(
+  File "/usr/local/lib/python3.10/site-packages/aiogithubapi/device.py", line 140, in activation
+    raise GitHubException("User took too long to enter key")
+aiogithubapi.exceptions.GitHubException: User took too long to enter key

@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace",
+  "data": {
+    "config": {
+      "title": "PinkPalace",
+      "views": [
+        {
+          "path": "default_view",
+          "title": "Home",
+          "cards": [
+            {
+              "type": "entities",
+              "entities": [
+                "person.anthony"
+              ]
+            },
+            {
+              "type": "weather-forecast",
+              "entity": "weather.forecast_pinkpalace",
+              "show_forecast": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

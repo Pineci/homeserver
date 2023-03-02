@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "auth_provider.homeassistant",
+  "data": {
+    "users": [
+      {
+        "username": "pineci",
+        "password": "JDJiJDEyJERuRUhZNmd6OUdTVTZKM0hLc1JRVnVsSEVOTWhody9jQ2M5T2s3ZkppTVhhSWQzMzdCdzFP"
+      }
+    ]
+  }
+}

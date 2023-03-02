@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "minor_version": 1,
+  "key": "person",
+  "data": {
+    "items": [
+      {
+        "name": "Anthony",
+        "user_id": "11335c22a6fc4fa69d74976dc0afb810",
+        "device_trackers": [
+          "device_tracker.pineci"
+        ],
+        "id": "anthony"
+      }
+    ]
+  }
+}
