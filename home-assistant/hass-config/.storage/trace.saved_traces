@@ -1,0 +1,339 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "trace.saved_traces",
+  "data": {
+    "script.new_script": [
+      {
+        "extended_dict": {
+          "last_step": "sequence/3",
+          "run_id": "16efe830664e5fbd5d49323d9e462ef4",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2023-03-03T01:50:17.577421+00:00",
+            "finish": "2023-03-03T01:50:24.931867+00:00"
+          },
+          "domain": "script",
+          "item_id": "new_script",
+          "trace": {
+            "sequence/0": [
+              {
+                "path": "sequence/0",
+                "timestamp": "2023-03-03T01:50:17.580097+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "script.new_script",
+                    "state": "off",
+                    "attributes": {
+                      "last_triggered": null,
+                      "mode": "single",
+                      "current": 0,
+                      "icon": "mdi:camera",
+                      "friendly_name": "Doorbell Snap Picture"
+                    },
+                    "last_changed": "2023-03-03T01:49:34.677972+00:00",
+                    "last_updated": "2023-03-03T01:49:34.677972+00:00",
+                    "context": {
+                      "id": "01GTJJJ1JNM6YKK4H6PSTESY8M",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "context": {
+                    "id": "01GTJJKBF8MKR5PZ9SS7VKBNZ1",
+                    "parent_id": null,
+                    "user_id": "11335c22a6fc4fa69d74976dc0afb810"
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "blink",
+                    "service": "trigger_camera",
+                    "service_data": {},
+                    "target": {
+                      "device_id": [
+                        "627b835abd6af984ad41a3d81fb23eea"
+                      ]
+                    }
+                  },
+                  "running_script": false,
+                  "limit": 10
+                }
+              }
+            ],
+            "sequence/1": [
+              {
+                "path": "sequence/1",
+                "timestamp": "2023-03-03T01:50:17.687007+00:00",
+                "result": {
+                  "delay": 5.0,
+                  "done": true
+                }
+              }
+            ],
+            "sequence/2": [
+              {
+                "path": "sequence/2",
+                "timestamp": "2023-03-03T01:50:22.690059+00:00",
+                "result": {
+                  "params": {
+                    "domain": "blink",
+                    "service": "blink_update",
+                    "service_data": {},
+                    "target": {}
+                  },
+                  "running_script": false,
+                  "limit": 10
+                }
+              }
+            ],
+            "sequence/3": [
+              {
+                "path": "sequence/3",
+                "timestamp": "2023-03-03T01:50:24.929283+00:00",
+                "result": {
+                  "params": {
+                    "domain": "camera",
+                    "service": "snapshot",
+                    "service_data": {
+                      "filename": "/tmp/my_image.jpg",
+                      "device_id": [
+                        "627b835abd6af984ad41a3d81fb23eea"
+                      ]
+                    },
+                    "target": {
+                      "device_id": [
+                        "627b835abd6af984ad41a3d81fb23eea"
+                      ]
+                    }
+                  },
+                  "running_script": false,
+                  "limit": 10
+                }
+              }
+            ]
+          },
+          "config": {
+            "alias": "Doorbell Snap Picture",
+            "sequence": [
+              {
+                "service": "blink.trigger_camera",
+                "data": {},
+                "target": {
+                  "device_id": "627b835abd6af984ad41a3d81fb23eea"
+                }
+              },
+              {
+                "delay": {
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 5,
+                  "milliseconds": 0
+                }
+              },
+              {
+                "service": "blink.blink_update",
+                "data": {}
+              },
+              {
+                "service": "camera.snapshot",
+                "data": {
+                  "filename": "/tmp/my_image.jpg"
+                },
+                "target": {
+                  "device_id": "627b835abd6af984ad41a3d81fb23eea"
+                }
+              }
+            ],
+            "mode": "single",
+            "icon": "mdi:camera"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01GTJJKBF8MKR5PZ9SS7VKBNZ1",
+            "parent_id": null,
+            "user_id": "11335c22a6fc4fa69d74976dc0afb810"
+          }
+        },
+        "short_dict": {
+          "last_step": "sequence/3",
+          "run_id": "16efe830664e5fbd5d49323d9e462ef4",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2023-03-03T01:50:17.577421+00:00",
+            "finish": "2023-03-03T01:50:24.931867+00:00"
+          },
+          "domain": "script",
+          "item_id": "new_script"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "sequence/3",
+          "run_id": "c3119e7be8e423f3e6c8c6276cd3c039",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2023-03-03T02:13:09.926381+00:00",
+            "finish": "2023-03-03T02:13:15.044409+00:00"
+          },
+          "domain": "script",
+          "item_id": "new_script",
+          "trace": {
+            "sequence/0": [
+              {
+                "path": "sequence/0",
+                "timestamp": "2023-03-03T02:13:09.928720+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "script.new_script",
+                    "state": "off",
+                    "attributes": {
+                      "last_triggered": "2023-03-03T01:50:17.577585+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "icon": "mdi:camera",
+                      "friendly_name": "Doorbell Snap Picture"
+                    },
+                    "last_changed": "2023-03-03T01:50:24.931485+00:00",
+                    "last_updated": "2023-03-03T01:50:24.931485+00:00",
+                    "context": {
+                      "id": "01GTJJKJN3PHHGZ5FZ8X6K6TEF",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "context": {
+                    "id": "01GTJKX7N56P6WCPB2TCE0H49V",
+                    "parent_id": null,
+                    "user_id": "11335c22a6fc4fa69d74976dc0afb810"
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "blink",
+                    "service": "trigger_camera",
+                    "service_data": {},
+                    "target": {
+                      "device_id": [
+                        "627b835abd6af984ad41a3d81fb23eea"
+                      ]
+                    }
+                  },
+                  "running_script": false,
+                  "limit": 10
+                }
+              }
+            ],
+            "sequence/1": [
+              {
+                "path": "sequence/1",
+                "timestamp": "2023-03-03T02:13:10.040792+00:00",
+                "result": {
+                  "delay": 5.0,
+                  "done": true
+                }
+              }
+            ],
+            "sequence/2": [
+              {
+                "path": "sequence/2",
+                "timestamp": "2023-03-03T02:13:15.042178+00:00",
+                "result": {
+                  "params": {
+                    "domain": "blink",
+                    "service": "blink_update",
+                    "service_data": {},
+                    "target": {}
+                  },
+                  "running_script": false,
+                  "limit": 10
+                }
+              }
+            ],
+            "sequence/3": [
+              {
+                "path": "sequence/3",
+                "timestamp": "2023-03-03T02:13:15.042845+00:00",
+                "result": {
+                  "params": {
+                    "domain": "camera",
+                    "service": "snapshot",
+                    "service_data": {
+                      "filename": "/tmp/my_image.jpg",
+                      "device_id": [
+                        "627b835abd6af984ad41a3d81fb23eea"
+                      ]
+                    },
+                    "target": {
+                      "device_id": [
+                        "627b835abd6af984ad41a3d81fb23eea"
+                      ]
+                    }
+                  },
+                  "running_script": false,
+                  "limit": 10
+                }
+              }
+            ]
+          },
+          "config": {
+            "alias": "Doorbell Snap Picture",
+            "sequence": [
+              {
+                "service": "blink.trigger_camera",
+                "data": {},
+                "target": {
+                  "device_id": "627b835abd6af984ad41a3d81fb23eea"
+                }
+              },
+              {
+                "delay": {
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 5,
+                  "milliseconds": 0
+                }
+              },
+              {
+                "service": "blink.blink_update",
+                "data": {}
+              },
+              {
+                "service": "camera.snapshot",
+                "data": {
+                  "filename": "/tmp/my_image.jpg"
+                },
+                "target": {
+                  "device_id": "627b835abd6af984ad41a3d81fb23eea"
+                }
+              }
+            ],
+            "mode": "single",
+            "icon": "mdi:camera"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01GTJKX7N56P6WCPB2TCE0H49V",
+            "parent_id": null,
+            "user_id": "11335c22a6fc4fa69d74976dc0afb810"
+          }
+        },
+        "short_dict": {
+          "last_step": "sequence/3",
+          "run_id": "c3119e7be8e423f3e6c8c6276cd3c039",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2023-03-03T02:13:09.926381+00:00",
+            "finish": "2023-03-03T02:13:15.044409+00:00"
+          },
+          "domain": "script",
+          "item_id": "new_script"
+        }
+      }
+    ]
+  }
+}

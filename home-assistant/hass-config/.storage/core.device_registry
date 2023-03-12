@@ -45,12 +45,12 @@
         "id": "5c3fc7b4e7ce4ee2074a6b500df3f1c8",
         "identifiers": [
           [
-            "upnp_host",
-            "192.168.4.1"
-          ],
-          [
             "upnp",
             "uuid:fcdb9233-a63f-41da-b42c-7cfeb99c8adf::urn:schemas-upnp-org:device:InternetGatewayDevice:1"
+          ],
+          [
+            "upnp_host",
+            "192.168.4.1"
           ]
         ],
         "manufacturer": "eero inc.",
@@ -229,6 +229,24 @@
         "via_device_id": null
       }
     ],
-    "deleted_devices": []
+    "deleted_devices": [
+      {
+        "config_entries": [],
+        "connections": [
+          [
+            "upnp",
+            "uuid:abb124f4-9650-41a2-8e06-46fe418017b0"
+          ]
+        ],
+        "identifiers": [
+          [
+            "dlna_dmr",
+            "uuid:abb124f4-9650-41a2-8e06-46fe418017b0"
+          ]
+        ],
+        "id": "e1a9192d0161730e1a0ec21df498fa86",
+        "orphaned_timestamp": 1677809250.273295
+      }
+    ]
   }
 }
